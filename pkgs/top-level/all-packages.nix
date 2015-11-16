@@ -2067,6 +2067,12 @@ let
     libuv = libuvVersions.v1_6_1;
     libtool = darwin.cctools;
   };
+
+  nodejs-5_0 = callPackage ../development/web/nodejs/v5_0.nix {
+    libtool = darwin.cctools;
+    openssl = openssl_1_0_2;
+  };
+
   nodejs-unstable = callPackage ../development/web/nodejs { libuv = libuvVersions.v1_2_0; unstableVersion = true; };
   nodejs-0_10 = callPackage ../development/web/nodejs/v0_10.nix {
     libtool = darwin.cctools;
